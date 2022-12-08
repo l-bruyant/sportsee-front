@@ -1,0 +1,21 @@
+header {
+    background-color: black;
+    height: 90px;
+    width: 100%;
+}
+
+.headerContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.headerElement {
+    color: white;
+    font-family: var(--main-font);
+    font-size: 24px;
+}

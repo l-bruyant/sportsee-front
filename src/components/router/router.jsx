@@ -1,7 +1,6 @@
 import React from 'react'
-import {
-  createBrowserRouter
-} from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom'
+import Root from './root'
 import '../../index.css'
 // import Root from "../routes/root";
 // import ErrorPage from "../routes/error-page";
@@ -10,7 +9,7 @@ import '../../index.css'
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <div> Hello bg </div>
+    element: <Root />
     // errorElement: <ErrorPage />,
     // children: [
     //   { index: true, element: <Home /> },

@@ -1,0 +1,24 @@
+.dashboard-left-bar {
+    width: 116px;
+    background-color: black;
+    height: calc(100vh - 90px);
+    position: absolute;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright-text {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    color: white;
+    font-family: var(--main-font);
+    font-size: 12px;
+    height: 150px;
+    display: block;
+    position: absolute;
+    bottom: 60px;
+    left: 45%;
+}

@@ -7,21 +7,23 @@ export default function Header () {
   return (
     <header>
         <div className='headerContent'>
-            <div className='headerElement'>
+            <div className='headerLogo'>
                 <img src={logoSportSee}/>
             </div>
-            <div className='headerElement'>
-                Accueil
-            </div>
-            <div className='headerElement'>
-                Profil
-            </div>
-            <div className='headerElement'>
-                Réglage
-            </div>
-            <div className='headerElement'>
-                Communauté
-            </div>
+            <nav>
+                <div className='headerElement'>
+                    Accueil
+                </div>
+                <div className='headerElement'>
+                    Profil
+                </div>
+                <div className='headerElement'>
+                    Réglage
+                </div>
+                <div className='headerElement'>
+                    Communauté
+                </div>
+            </nav>
         </div>
     </header>
   )

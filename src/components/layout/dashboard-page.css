@@ -1,0 +1,134 @@
+.dashboard-page-wrapper {
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 70px 100px;
+    margin: 90px 116px;
+}
+
+.red {
+    color: red;
+}
+
+.dashboard-page-header {
+    margin-bottom: 75px;
+    margin-left: 15px;
+}
+
+.dashboard-page-header h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+.dashboard-page-header p {
+    font-size: 18px;
+}
+
+.dashboard-page-content {
+    display: flex;
+    max-width: 1440px;
+    align-items: center;
+    margin: auto;
+}
+
+.dashboard-page-content-main {
+    display: flex;
+    flex-direction: column;
+    min-width: 865px;
+    width: 66%;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 640px ;
+}
+
+.dashboard-page-content-main-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard-page-content-side {
+    display: flex;
+    flex-direction: column;
+    min-width: 290px;
+    width: 34%;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 640px ;
+}
+
+.wide-graph-container {
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    width: 835px;
+    height: 320px;
+    min-height: 320px;
+    margin: 15px;
+}
+
+.square-graph-container {
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    height: 258px;
+    width: 258px;
+    margin: 15px;
+}
+
+.tracker-card {
+    background-color: #FBFBFB;
+    height: 124px ;
+    min-height: 124px ;
+    width: 260px;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+#sessions {
+    background-color: red;
+    color: white;
+}
+
+#radar {
+    background-color: #282D30;
+    color: white;
+}
+
+
+@media screen and (max-width:1440px) {
+    .dashboard-page-content {
+        align-items: flex-start;
+    }
+    .dashboard-page-header {
+        margin-bottom: 20px;
+    }
+    
+    .dashboard-page-header h1 {
+        margin-bottom: 12px;
+    }
+    .dashboard-page-wrapper {
+        padding: 15px 25px;
+    }
+}
+
+@media screen and (max-width:1300px) {
+    .dashboard-page-content {
+        flex-wrap: wrap-reverse ;
+        margin-top: 20px;
+        width: 865px;
+        margin: auto;
+    }
+    .dashboard-page-content-side {
+        flex-direction: row;
+        width: 100%;
+        min-height: 0px ;
+    }
+    .tracker-card {
+        height: 104px ;
+        width: 100%;
+        max-width: 180px;
+        border-radius: 5px;
+        margin: 15px;
+    }
+}

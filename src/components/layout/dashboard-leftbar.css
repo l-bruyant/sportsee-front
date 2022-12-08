@@ -2,12 +2,16 @@
     width: 116px;
     background-color: black;
     height: calc(100vh - 90px);
-    position: absolute;
-    left: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    position: fixed;
+    top:90px
+}
+
+.dashboard-left-bar nav {
+    margin: auto;
 }
 
 .copyright-text {
@@ -18,7 +22,6 @@
     font-size: 12px;
     height: 150px;
     display: block;
-    position: absolute;
-    bottom: 60px;
-    left: 45%;
+    position: relative;
+    margin-bottom: 60px;
 }

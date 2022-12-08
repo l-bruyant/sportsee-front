@@ -1,0 +1,17 @@
+{
+    "data": {
+        "id": 100,
+        "userInfos": {
+            "firstName": "Johnny",
+            "lastName": "Testor",
+            "age": 30
+        },
+        "score": 0.3,
+        "keyData": {
+            "calorieCount": 1999,
+            "proteinCount": 200,
+            "carbohydrateCount": 150,
+            "lipidCount": 100
+        }
+    }
+}

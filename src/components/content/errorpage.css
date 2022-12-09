@@ -1,0 +1,22 @@
+#error-page {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 600px;
+}
+
+#error-page h1 {
+    font-weight: 700;
+    color: red;
+    font-size: 188px;
+    text-align: center;
+    margin: 190px 0px 0px 0px;
+}
+
+#error-page p {
+    font-weight: 500;
+    color: red;
+    font-size: 26px;
+    text-align: center;   
+    margin: 66px 0px 182px 0px;
+}

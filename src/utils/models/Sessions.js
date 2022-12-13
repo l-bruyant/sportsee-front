@@ -12,4 +12,15 @@ export default class AverageSessions {
       return session.sessionLength
     })
   }
+
+  get sessionsLengthGraphTable () {
+    return this._avgSessions.map((session) => {
+      const dayNumber = session.day
+      const dayLetter = this.daysTable[dayNumber - 1]
+      return {
+        day: dayLetter,
+        length: session.sessionLength
+      }
+    })
+  }
 }

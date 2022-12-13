@@ -24,4 +24,14 @@ export default class Activities {
       return parseInt(session.day.slice(-2))
     })
   }
+
+  get activityGraphTable () {
+    return this._sessions.map((session) => {
+      return {
+        kil: session.kilogram,
+        cal: session.calories,
+        day: parseInt(session.day.slice(-2))
+      }
+    })
+  }
 }

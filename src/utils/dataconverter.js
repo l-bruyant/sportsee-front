@@ -4,9 +4,9 @@ import mockedUserAverageSessionsJSON from '../data/mocks/mock_useraveragesession
 import mockedUserPerformanceJSON from '../data/mocks/mock_userperformance.json'
 
 import User from './models/User'
-import Activities from './utils/models/Activities.js'
-import AverageSessions from './utils/models/Sessions.js'
-import Performances from './utils/models/Performances.js'
+import Activities from './models/Activities.js'
+import AverageSessions from './models/Sessions.js'
+import Performances from './models/Performances.js'
 
 export const mockedUser = mockedUserJSON
 export const mockedUserActivity = mockedUserActivityJSON
@@ -14,6 +14,6 @@ export const mockedUserAverageSessions = mockedUserAverageSessionsJSON
 export const mockedUserPerformance = mockedUserPerformanceJSON
 
 export const currentUser = new User(mockedUser)
-export const testActivitiesList = new Activities(mockedUserActivity)
-export const testAverageActivities = new AverageSessions(mockedUserAverageSessions)
-export const testPerformance = new Performances(mockedUserPerformance)
+export const currentActivitiesList = new Activities(mockedUserActivity)
+export const currentAverageActivities = new AverageSessions(mockedUserAverageSessions)
+export const currentPerformance = new Performances(mockedUserPerformance)

@@ -13,4 +13,15 @@ export default class Performances {
       return activitiy.value
     })
   }
+
+  get performancesGraphTable () {
+    return this._dataPerKind.map((activitiy) => {
+      const activityId = activitiy.kind
+      const activityName = this.kindsTable[activityId]
+      return {
+        activity: activityName,
+        score: activitiy.value
+      }
+    })
+  }
 }

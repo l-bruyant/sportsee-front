@@ -1,17 +1,18 @@
 import React from 'react'
+
+import { currentUser } from '../../utils/dataconverter'
+
 import './dashboard-page.css'
+
 import caloriesIcon from '../../assets/images/calories-icon.svg'
 import carbsIcon from '../../assets/images/carbs-icon.svg'
 import lipidsIcon from '../../assets/images/lipids-icon.svg'
 import proteinIcon from '../../assets/images/protein-icon.svg'
-// import { mockedUser, mockedUserActivity, mockedUserAverageSessions, mockedUserPerformance } from '../../utils/dataconverter'
+
 import ErrorPage from '../content/errorpage'
-import { mockedUser } from '../../utils/dataconverter'
-import User from '../../utils/models/User'
 import Infocard from '../content/infocard'
 
 export default function DashboardPage () {
-  const currentUser = new User(mockedUser)
   if (currentUser == null) {
     return <ErrorPage />
   }

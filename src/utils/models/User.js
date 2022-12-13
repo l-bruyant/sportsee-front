@@ -13,7 +13,7 @@ export default class User {
   }
 
   get calories () {
-    return this._calorieCount * 2
+    return this._calorieCount
   }
 
   get proteins () {

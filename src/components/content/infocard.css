@@ -1,0 +1,56 @@
+.infocard {
+    background-color: #FBFBFB;
+    height: 124px ;
+    min-height: 124px ;
+    width: 260px;
+    border-radius: 5px;
+    margin: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.infocard-icon {
+    margin: 0px 0px 0px 30px;
+}
+
+.infocard-info {
+    margin: 22px;
+}
+
+.infocard-info-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #282D30;
+    margin-bottom: 4px;
+}
+
+.infocard-info-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: #74798C;
+    margin-bottom: 4px;
+}
+
+@media screen and (max-width:1300px) {
+    .infocard {
+        min-height: 94px;
+        height: 94px ;
+        width: 100%;
+        max-width: 180px;
+        border-radius: 5px;
+        margin: 15px;
+    }
+    .infocard-icon {
+        margin: 0px 0px 0px 14px;
+    }
+    .infocard-info {
+        margin: 14px;
+    }
+    .infocard-info-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #282D30;
+        margin-bottom: 4px;
+    }
+}

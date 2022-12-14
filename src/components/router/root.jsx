@@ -9,7 +9,7 @@ export default function Root () {
     <div id='app-wrapper'>
         <Header />
         <Outlet />
-        <div className='responsive-blocker'>This site is not available for screen less than 1024px wide yet. Please use a wider screen to access the site.</div>
+        <div className='responsive-blocker'>Under development 🚧 <br/> <br/> This site is not available for screen less than 1024px wide yet. <br/> <br/> Please use a wider screen to access the site.</div>
     </div>
   )
 }

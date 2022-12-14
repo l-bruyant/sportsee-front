@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { currentUser } from '../../utils/dataconverter'
+import { currentUser, currentActivitiesList } from '../../utils/dataconverter'
 
 import './dashboard-page.css'
 
@@ -11,6 +11,7 @@ import proteinIcon from '../../assets/images/protein-icon.svg'
 
 import ErrorPage from '../content/errorpage'
 import Infocard from '../content/infocard'
+import DoubleBarChart from '../content/barchart'
 
 export default function DashboardPage () {
   if (currentUser == null) {
@@ -26,7 +27,7 @@ export default function DashboardPage () {
         <div className='dashboard-page-content'>
             <div className='dashboard-page-content-main'>
                 <div className='wide-graph-container'>
-                    Activité quotidienne
+                    <DoubleBarChart tableData={currentActivitiesList.activityGraphTable}/>
                 </div>
                 <div className='dashboard-page-content-main-bottom'>
                     <div className='square-graph-container' id='sessions'>

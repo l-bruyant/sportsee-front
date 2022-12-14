@@ -7,7 +7,8 @@
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    top:90px
+    top:90px;
+    z-index: 200
 }
 
 .dashboard-left-bar nav {

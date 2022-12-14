@@ -34,11 +34,9 @@ export default class User {
 
   get scoreGraphTable () {
     return {
-      scoreNb: this._score,
-      scoreDisplay: this._score * 100 + '%',
-      scoreNbInvert: 1 - this._score,
-      scoreDisplayInvert: ((1 - this._score) * 100) + '%',
-      name: 'score'
+      name: 'score',
+      score: this._score * 100,
+      fill: 'red'
     }
   }
 }

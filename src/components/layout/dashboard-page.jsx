@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { currentUser, currentActivitiesList } from '../../utils/dataconverter'
+import { currentUser, currentActivitiesList, currentAverageActivities, currentPerformance } from '../../utils/dataconverter'
 
 import './dashboard-page.css'
 
@@ -12,6 +12,9 @@ import proteinIcon from '../../assets/images/protein-icon.svg'
 import ErrorPage from '../content/errorpage'
 import Infocard from '../content/infocard'
 import DoubleBarChart from '../content/barchart'
+import SimpleLineChart from '../content/linechart'
+import ActivityRadar from '../content/radarchart'
+import RadialScore from '../content/radialbarchart'
 
 export default function DashboardPage () {
   if (currentUser == null) {
@@ -27,17 +30,18 @@ export default function DashboardPage () {
         <div className='dashboard-page-content'>
             <div className='dashboard-page-content-main'>
                 <div className='wide-graph-container'>
+                    <div className='chart-title'>Activité quotidienne</div>
                     <DoubleBarChart tableData={currentActivitiesList.activityGraphTable}/>
                 </div>
                 <div className='dashboard-page-content-main-bottom'>
                     <div className='square-graph-container' id='sessions'>
-                        Durée Moyenne des Sessions
+                        <SimpleLineChart tableData={currentAverageActivities.sessionsLengthGraphTable} />
                     </div>
                     <div className='square-graph-container' id='radar'>
-                        Radar chart
+                        <ActivityRadar tableData={currentPerformance.performancesGraphTable} />
                     </div>
                     <div className='square-graph-container' id='score'>
-                        Score
+                        <RadialScore tableData={currentUser.scoreGraphTable} />
                     </div>
                 </div>
             </div>

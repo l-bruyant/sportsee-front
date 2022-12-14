@@ -17,3 +17,5 @@ export const currentUser = new User(mockedUser)
 export const currentActivitiesList = new Activities(mockedUserActivity)
 export const currentAverageActivities = new AverageSessions(mockedUserAverageSessions)
 export const currentPerformance = new Performances(mockedUserPerformance)
+
+console.log(currentUser.scoreGraphTable)

@@ -1,0 +1,9 @@
+#sessions .recharts-cartesian-axis-tick tspan {
+    font-size: 14px;
+    font-weight: 500;
+    fill: #FFFFFF;
+}
+
+#sessions .recharts-layer .recharts-cartesian-axis .recharts-xAxis .xAxis {
+    width: 120px;
+}

@@ -1,7 +1,7 @@
 
 import React from 'react'
-import './header.css'
-import logoSportSee from '../../assets/images/logo-sportsee.svg'
+import './appHeader.css'
+import logoSportSee from '../../../assets/images/logo-sportsee.svg'
 
 export default function Header () {
   return (

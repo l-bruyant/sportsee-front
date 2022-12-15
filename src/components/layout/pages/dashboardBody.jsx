@@ -1,20 +1,20 @@
 import React from 'react'
 
-import { currentUser, currentActivitiesList, currentAverageActivities, currentPerformance } from '../../utils/dataconverter'
+import { currentUser, currentDailyActivity, currentDailySessionsLength, currentPerfByCategory } from '../../../utils/dataInputFormatter'
 
-import './dashboard-page.css'
+import './dashboardBody.css'
 
-import caloriesIcon from '../../assets/images/calories-icon.svg'
-import carbsIcon from '../../assets/images/carbs-icon.svg'
-import lipidsIcon from '../../assets/images/lipids-icon.svg'
-import proteinIcon from '../../assets/images/protein-icon.svg'
+import caloriesIcon from '../../../assets/images/calories-icon.svg'
+import carbsIcon from '../../../assets/images/carbs-icon.svg'
+import lipidsIcon from '../../../assets/images/lipids-icon.svg'
+import proteinIcon from '../../../assets/images/protein-icon.svg'
 
-import ErrorPage from '../content/errorpage'
-import Infocard from '../content/infocard'
-import DoubleBarChart from '../content/barchart'
-import SimpleLineChart from '../content/linechart'
-import ActivityRadar from '../content/radarchart'
-import RadialScore from '../content/radialbarchart'
+import ErrorPage from './errorpage'
+import Infocard from '../../content/cards/infoCard'
+import DoubleBarChart from '../../content/charts/bar/dailyActivityBar'
+import SimpleLineChart from '../../content/charts/line/dailySessionsLenghtLine'
+import ActivityRadar from '../../content/charts/radar/perfByCatRadar'
+import RadialScore from '../../content/charts/radial/userScoreRadial'
 
 export default function DashboardPage () {
   if (currentUser == null) {
@@ -31,27 +31,27 @@ export default function DashboardPage () {
             <div className='dashboard-page-content-main'>
                 <div className='wide-graph-container'>
                     <div className='chart-title'>Activité quotidienne</div>
-                    <DoubleBarChart tableData={currentActivitiesList.activityGraphTable}/>
+                    <DoubleBarChart tableData={currentDailyActivity.barChartData}/>
                 </div>
                 <div className='dashboard-page-content-main-bottom'>
                     <div className='square-graph-container' id='sessions'>
                         <div className='chart-title'>Durée moyenne des sessions</div>
-                        <SimpleLineChart tableData={currentAverageActivities.sessionsLengthGraphTable} />
+                        <SimpleLineChart tableData={currentDailySessionsLength.lineChartData} />
                     </div>
                     <div className='square-graph-container' id='radar'>
-                        <ActivityRadar tableData={currentPerformance.performancesGraphTable} />
+                        <ActivityRadar tableData={currentPerfByCategory.radarChartData} />
                     </div>
                     <div className='square-graph-container' id='score'>
                         <div className='chart-title'>Score</div>
                         <div className='score-bubble'>
                             <div className='user-score-display'>
-                                {currentUser.scoreGraphTable.score}%
+                                {currentUser.radialBarChartData.score}%
                             </div>
                             <div className='user-score-legend'>
                                 de votre <br/> objectif
                             </div>
                         </div>
-                        <RadialScore tableData={currentUser.scoreGraphTable} />
+                        <RadialScore tableData={currentUser.radialBarChartData} />
                     </div>
                 </div>
             </div>

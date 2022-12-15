@@ -7,6 +7,7 @@
     align-items: flex-start;
     padding: 70px 100px;
     margin: 90px 116px;
+    transition: all 0.2s ease;
 }
 
 .red {
@@ -16,6 +17,7 @@
 .dashboard-page-header {
     margin-bottom: 75px;
     margin-left: 15px;
+    transition: all 0.2s ease;
 }
 
 .dashboard-page-header h1 {
@@ -32,6 +34,7 @@
     max-width: 1440px;
     align-items: center;
     margin: auto;
+    transition: all 0.2s ease;
 }
 
 .dashboard-page-content-main {
@@ -56,7 +59,8 @@
     width: 34%;
     justify-content: space-between;
     align-items: center;
-    min-height: 640px ;
+    min-height: 640px;
+    transition: all 0.6s ease;
 }
 
 .wide-graph-container {
@@ -123,8 +127,9 @@
 .user-score-display {
     color: #282D30;
     font-size: 26px;
+    font-weight: bold;
     line-height: 24px;
-    margin: 30px 0px 5px 0px
+    margin: 20px 0px 5px 0px
 }
 
 .user-score-legend {

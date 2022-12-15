@@ -1,4 +1,4 @@
-export default class User {
+export default class UserData {
   constructor (userData) {
     this._firstName = userData.data.userInfos.firstName
     this._calorieCount = userData.data.keyData.calorieCount
@@ -28,11 +28,7 @@ export default class User {
     return this._lipidCount
   }
 
-  get score () {
-    return this._score
-  }
-
-  get scoreGraphTable () {
+  get radialBarChartData () {
     return {
       name: 'score',
       score: this._score * 100,

@@ -1,8 +1,8 @@
 
 import React from 'react'
-import './dashboard.css'
-import DashboardLeftBar from './dashboard-leftbar'
-import DashboardPage from './dashboard-page'
+import './dashboardLayout.css'
+import DashboardLeftBar from '../nav/dashboardLeftBar'
+import DashboardPage from './dashboardBody'
 
 export default function Dashboard () {
   return (

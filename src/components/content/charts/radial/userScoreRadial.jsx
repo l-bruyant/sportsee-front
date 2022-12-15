@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react'
 import { RadialBarChart, RadialBar, Dot, ResponsiveContainer, PolarAngleAxis } from 'recharts'
 import PropTypes from 'prop-types'
-import './radialbarchart.css'
+import './userScoreRadial.css'
 
 export default class Example extends PureComponent {
   static demoUrl = 'https://codesandbox.io/s/simple-radial-bar-chart-qf8fz'

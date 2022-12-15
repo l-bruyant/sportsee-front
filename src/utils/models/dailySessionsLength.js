@@ -1,4 +1,4 @@
-export default class AverageSessions {
+export default class DailySessionsLength {
   constructor (averageSessionsData) {
     this._avgSessions = averageSessionsData.data.sessions
   }
@@ -7,13 +7,7 @@ export default class AverageSessions {
     return ['L', 'M', 'M', 'J', 'V', 'S', 'D']
   }
 
-  get lengthsTable () {
-    return this._avgSessions.map((session) => {
-      return session.sessionLength
-    })
-  }
-
-  get sessionsLengthGraphTable () {
+  get lineChartData () {
     return this._avgSessions.map((session) => {
       const dayNumber = session.day
       const dayLetter = this.daysTable[dayNumber - 1]

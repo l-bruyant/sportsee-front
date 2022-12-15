@@ -1,6 +1,6 @@
 
 import React from 'react'
-import './activityfilter.css'
+import './dashboardLeftBarButton.css'
 import PropTypes from 'prop-types'
 
 ActivityFilter.propTypes = {

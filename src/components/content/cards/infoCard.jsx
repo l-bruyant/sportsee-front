@@ -1,6 +1,6 @@
 
 import React from 'react'
-import './infocard.css'
+import './infoCard.css'
 import PropTypes from 'prop-types'
 
 Infocard.propTypes = {

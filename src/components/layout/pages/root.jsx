@@ -1,6 +1,5 @@
-// import { Outlet } from 'react-router-dom'
 import React from 'react'
-import Header from '../layout/header'
+import Header from '../nav/appHeader'
 import { Outlet } from 'react-router-dom'
 import './root.css'
 

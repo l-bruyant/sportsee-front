@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react'
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, PolarRadiusAxis } from 'recharts'
 import PropTypes from 'prop-types'
-import './radarchart.css'
+import './perfByCatRadar.css'
 export default class ActivityRadar extends PureComponent {
   static get propTypes () {
     return {

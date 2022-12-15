@@ -1,4 +1,4 @@
-export default class Performances {
+export default class PerfByCategory {
   constructor (performancesData) {
     this._kinds = performancesData.data.kind
     this._dataPerKind = performancesData.data.data
@@ -8,13 +8,7 @@ export default class Performances {
     return this._kinds
   }
 
-  get performancesTable () {
-    return this._dataPerKind.map((activitiy) => {
-      return activitiy.value
-    })
-  }
-
-  get performancesGraphTable () {
+  get radarChartData () {
     return this._dataPerKind.map((activitiy) => {
       const activityId = activitiy.kind
       const activityName = this.kindsTable[activityId]

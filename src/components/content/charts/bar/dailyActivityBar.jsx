@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 // eslint-disable-next-line no-unused-vars
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Text, Tooltip, Legend, ResponsiveContainer, Customized } from 'recharts'
-import './barchart.css'
+import './dailyActivityBar.css'
 
 const CustomTooltip = ({ active, payload }) => {
   if (active) {

@@ -11,16 +11,16 @@ import ActivityFilter from './dashboardLeftBarButton'
 
 export default function DashboardLeftBar () {
   return (
-      <div className='dashboard-left-bar'>
-            <nav>
-                <ActivityFilter src={meditateIcon} />
-                <ActivityFilter src={swimIcon} />
-                <ActivityFilter src={bikeIcon} />
-                <ActivityFilter src={weightIcon} />
-            </nav>
-            <div className='copyright-text'>
+    <div className='dashboard-left-bar'>
+      <nav>
+        <ActivityFilter src={meditateIcon} />
+        <ActivityFilter src={swimIcon} />
+        <ActivityFilter src={bikeIcon} />
+        <ActivityFilter src={weightIcon} />
+      </nav>
+      <div className='copyright-text'>
                 Copyright, SportSee2020
-            </div>
       </div>
+    </div>
   )
 }

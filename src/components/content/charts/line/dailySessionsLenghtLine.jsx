@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { PureComponent } from 'react'
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Rectangle } from 'recharts'
 import PropTypes from 'prop-types'
@@ -8,9 +7,9 @@ import './dailySessionsLenghtLine.css'
 const CustomTooltip = ({ active, payload }) => {
   if (active) {
     return (
-          <div className="custom-tool-tip-linechart">
-              <p className="custom-tool-tip-text-linechart">{`${payload[0].value}`}min</p>
-          </div>
+      <div className="custom-tool-tip-linechart">
+        <p className="custom-tool-tip-text-linechart">{`${payload[0].value}`}min</p>
+      </div>
     )
   }
   return null
@@ -21,19 +20,13 @@ const CustomCursor = ({ points }) => {
 }
 
 export default class DailySessionsLenghtLine extends PureComponent {
-  static get propTypes () {
-    return {
-      graphData: PropTypes.any
-    }
-  }
-
   render () {
     return (
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           width={500}
           height={300}
-          data={this.props.graphData}
+          data={this.props.chartData}
           margin={{
             top: 100,
             right: 0,
@@ -78,4 +71,17 @@ export default class DailySessionsLenghtLine extends PureComponent {
       </ResponsiveContainer>
     )
   }
+}
+
+CustomTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array
+}
+
+CustomCursor.propTypes = {
+  points: PropTypes.object
+}
+
+DailySessionsLenghtLine.propTypes = {
+  chartData: PropTypes.array
 }

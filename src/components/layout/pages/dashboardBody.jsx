@@ -1,6 +1,18 @@
 import React from 'react'
 
-import { currentUser, currentDailyActivity, currentDailySessionsLength, currentPerfByCategory } from '../../../utils/dataInputFormatter'
+import {
+  currentUser,
+  userFirstName,
+  userScore,
+  userCalories,
+  userProteins,
+  userCarbs,
+  userLipids,
+  dailyActivityData,
+  dailySessionLengthData,
+  perfByCatData,
+  userScoreData
+} from '../../../utils/dataFormatter'
 
 import './dashboardBody.css'
 
@@ -22,46 +34,46 @@ export default function dashboardBody () {
   }
 
   return (
-      <div className='dashboard-page-wrapper'>
-        <div className='dashboard-page-header'>
-            <h1>Bonjour <span className='red'>{currentUser.firstName}</span></h1>
-            <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
-        </div>
-        <div className='dashboard-page-content'>
-            <div className='dashboard-page-content-main'>
-                <div className='wide-graph-container'>
-                    <div className='chart-title'>Activité quotidienne</div>
-                    <DailyActivityBar graphData={currentDailyActivity.barChartData}/>
+    <div className='dashboard-page-wrapper'>
+      <div className='dashboard-page-header'>
+        <h1>Bonjour <span className='red'>{userFirstName}</span></h1>
+        <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+      </div>
+      <div className='dashboard-page-content'>
+        <div className='dashboard-page-content-main'>
+          <div className='wide-graph-container'>
+            <div className='chart-title'>Activité quotidienne</div>
+            <DailyActivityBar chartData={dailyActivityData}/>
+          </div>
+          <div className='dashboard-page-content-main-bottom'>
+            <div className='square-graph-container' id='sessions'>
+              <div className='chart-title'>Durée moyenne des sessions</div>
+              <DailySessionsLenghtLine chartData={dailySessionLengthData} />
+            </div>
+            <div className='square-graph-container' id='radar'>
+              <PerfByCatRadar chartData={perfByCatData} />
+            </div>
+            <div className='square-graph-container' id='score'>
+              <div className='chart-title'>Score</div>
+              <div className='score-bubble'>
+                <div className='user-score-display'>
+                  {userScore}%
                 </div>
-                <div className='dashboard-page-content-main-bottom'>
-                    <div className='square-graph-container' id='sessions'>
-                        <div className='chart-title'>Durée moyenne des sessions</div>
-                        <DailySessionsLenghtLine graphData={currentDailySessionsLength.lineChartData} />
-                    </div>
-                    <div className='square-graph-container' id='radar'>
-                        <PerfByCatRadar graphData={currentPerfByCategory.radarChartData} />
-                    </div>
-                    <div className='square-graph-container' id='score'>
-                        <div className='chart-title'>Score</div>
-                        <div className='score-bubble'>
-                            <div className='user-score-display'>
-                                {currentUser.radialBarChartData.score}%
-                            </div>
-                            <div className='user-score-legend'>
+                <div className='user-score-legend'>
                                 de votre <br/> objectif
-                            </div>
-                        </div>
-                        <UserScoreRadial graphData={currentUser.radialBarChartData} />
-                    </div>
                 </div>
+              </div>
+              <UserScoreRadial chartData={userScoreData} />
             </div>
-            <div className='dashboard-page-content-side'>
-                <InfoCard imgSrc={caloriesIcon} number={currentUser.calories} unit='kCal' category='Calories' key='calCard' />
-                <InfoCard imgSrc={proteinIcon} number={currentUser.proteins} unit='g' category='Protéines' key='protsCard' />
-                <InfoCard imgSrc={carbsIcon} number={currentUser.carbs} unit='g' category='Glucides' key='carbsCard' />
-                <InfoCard imgSrc={lipidsIcon} number={currentUser.lipids} unit='g' category='Lipides' key='fatsCard' />
-            </div>
+          </div>
+        </div>
+        <div className='dashboard-page-content-side'>
+          <InfoCard imgSrc={caloriesIcon} number={userCalories} unit='kCal' category='Calories' key='calCard' />
+          <InfoCard imgSrc={proteinIcon} number={userProteins} unit='g' category='Protéines' key='protsCard' />
+          <InfoCard imgSrc={carbsIcon} number={userCarbs} unit='g' category='Glucides' key='carbsCard' />
+          <InfoCard imgSrc={lipidsIcon} number={userLipids} unit='g' category='Lipides' key='fatsCard' />
         </div>
       </div>
+    </div>
   )
 }

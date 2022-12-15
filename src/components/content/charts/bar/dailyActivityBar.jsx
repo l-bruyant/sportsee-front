@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
@@ -8,29 +7,23 @@ import './dailyActivityBar.css'
 const CustomTooltip = ({ active, payload }) => {
   if (active) {
     return (
-          <div className="custom-tool-tip">
-              <p className="tool-tip-text">{`${payload[0].value}`}kg</p>
-              <p className="tool-tip-text">{`${payload[1].value}`}Kcal</p>
-          </div>
+      <div className="custom-tool-tip">
+        <p className="tool-tip-text">{`${payload[0].value}`}kg</p>
+        <p className="tool-tip-text">{`${payload[1].value}`}Kcal</p>
+      </div>
     )
   }
   return null
 }
 
 export default class DailyActivityBar extends PureComponent {
-  static get propTypes () {
-    return {
-      graphData: PropTypes.any
-    }
-  }
-
   render () {
     return (
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={500}
           height={300}
-          data={this.props.graphData}
+          data={this.props.chartData}
           barGap={8}
           margin={{
             top: 112,
@@ -119,4 +112,13 @@ export default class DailyActivityBar extends PureComponent {
       </ResponsiveContainer>
     )
   }
+}
+
+CustomTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array
+}
+
+DailyActivityBar.propTypes = {
+  chartData: PropTypes.array
 }

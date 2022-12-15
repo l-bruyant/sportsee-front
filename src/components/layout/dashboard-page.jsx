@@ -35,12 +35,22 @@ export default function DashboardPage () {
                 </div>
                 <div className='dashboard-page-content-main-bottom'>
                     <div className='square-graph-container' id='sessions'>
+                        <div className='chart-title'>Durée moyenne des sessions</div>
                         <SimpleLineChart tableData={currentAverageActivities.sessionsLengthGraphTable} />
                     </div>
                     <div className='square-graph-container' id='radar'>
                         <ActivityRadar tableData={currentPerformance.performancesGraphTable} />
                     </div>
                     <div className='square-graph-container' id='score'>
+                        <div className='chart-title'>Score</div>
+                        <div className='score-bubble'>
+                            <div className='user-score-display'>
+                                {currentUser.scoreGraphTable.score}%
+                            </div>
+                            <div className='user-score-legend'>
+                                de votre <br/> objectif
+                            </div>
+                        </div>
                         <RadialScore tableData={currentUser.scoreGraphTable} />
                     </div>
                 </div>

@@ -1,8 +1,8 @@
+/* eslint-disable react/prop-types */
 import React, { PureComponent } from 'react'
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts'
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, PolarRadiusAxis } from 'recharts'
 import PropTypes from 'prop-types'
-import './linechart.css'
-
+import './radarchart.css'
 export default class ActivityRadar extends PureComponent {
   static get propTypes () {
     return {
@@ -12,24 +12,29 @@ export default class ActivityRadar extends PureComponent {
 
   render () {
     return (
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer>
         <RadarChart
-            cx="50%"
-            cy="50%"
             data={this.props.tableData}
-            innerRadius={1}
-            outerRadius={90}
+            innerRadius={9}
+            outerRadius={85}
         >
-          <PolarGrid/>
+          <PolarGrid
+            radialLines={false}
+          />
           <PolarAngleAxis
-            dataKey="activity"/>
+            dataKey="activity"
+            tick={{ fill: 'white', fontSize: '11' }}
+            dy={5}
+            dx={-3}
+          />
           <PolarRadiusAxis
-            domain={['dataMin - 10', 'dataMax + 10']}
+            domain={['0', 'dataMax + 20']}
             tick={false}
+            tickCount={5}
             axisLine={false}
             scale="auto"
           />
-          <Radar name="Mike" dataKey="score" fill="#F60000" fillOpacity={0.6} />
+          <Radar dataKey="score" fill="#F60000" fillOpacity={0.7} />
         </RadarChart>
       </ResponsiveContainer>
     )

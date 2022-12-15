@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { PureComponent } from 'react'
-import { RadialBarChart, RadialBar, Legend, ResponsiveContainer, PolarAngleAxis } from 'recharts'
+import { RadialBarChart, RadialBar, Dot, ResponsiveContainer, PolarAngleAxis } from 'recharts'
 import PropTypes from 'prop-types'
 import './radialbarchart.css'
 
@@ -15,7 +15,7 @@ export default class Example extends PureComponent {
   render () {
     return (
       <ResponsiveContainer width="100%" height="100%">
-        <RadialBarChart cx="50%" cy="50%" innerRadius="70%" outerRadius="80%" barSize={10} data={[this.props.tableData]} startAngle={90} endAngle={450}>
+        <RadialBarChart cx="50%" cy="50%" innerRadius="64%" outerRadius="80%" barSize={10} data={[this.props.tableData]} startAngle={90} endAngle={450}>
           <PolarAngleAxis type='number' domain={[0, 100]} tick={false}/>
           <RadialBar
             minAngle={100}

@@ -1,0 +1,4 @@
+#radar g.recharts-polar-angle-axis  {
+    transform: scaleY(1.08) scaleX(0.93);
+    transform-origin: center;
+}

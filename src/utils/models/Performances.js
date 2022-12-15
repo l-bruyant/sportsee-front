@@ -18,8 +18,9 @@ export default class Performances {
     return this._dataPerKind.map((activitiy) => {
       const activityId = activitiy.kind
       const activityName = this.kindsTable[activityId]
+      const activitiyNameCap = activityName.charAt(0).toUpperCase() + activityName.slice(1)
       return {
-        activity: activityName,
+        activity: activitiyNameCap,
         score: activitiy.value
       }
     })

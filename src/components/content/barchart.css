@@ -14,3 +14,19 @@
     top: 10px;
     left: 10px
 }
+
+.custom-tool-tip {
+    background-color: #E60000;
+    width: 40px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.tool-tip-text {
+    font-weight: 500;
+    font-size: 7px;
+    color: #FFFFFF;
+    text-align: center;
+}

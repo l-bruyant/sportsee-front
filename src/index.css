@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: url("./assets/fonts/Roboto/Roboto-Regular.ttf");
+    src: url("./assets/fonts/Roboto/Roboto-Medium.ttf");
 }
 
 :root {
@@ -20,6 +20,10 @@
 *::-webkit-scrollbar {
     display: none;
   }
+
+*:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px
+}
 
 body, html {
     height: 100%;

@@ -1,8 +1,21 @@
+/* eslint-disable react/prop-types */
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 // eslint-disable-next-line no-unused-vars
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Text, Tooltip, Legend, ResponsiveContainer, Customized } from 'recharts'
 import './barchart.css'
+
+const CustomTooltip = ({ active, payload }) => {
+  if (active) {
+    return (
+          <div className="custom-tool-tip">
+              <p className="tool-tip-text">{`${payload[0].value}`}kg</p>
+              <p className="tool-tip-text">{`${payload[1].value}`}Kcal</p>
+          </div>
+    )
+  }
+  return null
+}
 
 export default class DoubleBarChart extends PureComponent {
   static get propTypes () {
@@ -18,6 +31,7 @@ export default class DoubleBarChart extends PureComponent {
           width={500}
           height={300}
           data={this.props.tableData}
+          barGap={8}
           margin={{
             top: 112,
             right: 30,
@@ -35,8 +49,7 @@ export default class DoubleBarChart extends PureComponent {
             stroke="#9B9EAC"
             tickLine={false}
             tickMargin="15"
-            padding={{ right: -46, left: -46 }}
-            wrapperStyle={{ color: '#000000' }}
+            padding={{ right: -42, left: -42 }}
           />
           <YAxis
             orientation="right"
@@ -69,26 +82,20 @@ export default class DoubleBarChart extends PureComponent {
             tickMargin="0"
           />
           <Tooltip
-            separator={false}
-            wrapperStyle={{ backgroundColor: '#FFFFFF', color: '#FFFFFF' }}
-            contentStyle={{ backgroundColor: '#FFFFFF', color: '#FFFFFF' }}
-            labelStyle={{ backgroundColor: '#E60000', color: '#FFFFFF' }}
-            viewBox={{ x: 0, y: 0, width: 40, height: 65 }}
-            allowEscapeViewBox={{ x: true, y: true }}
+            allowEscapeViewBox={{ x: false, y: false }}
             offset= {60}
             position={{ y: 50 }}
+            cursor={{ fill: 'rgba(196, 196, 196, 0.5' }}
+            content={<CustomTooltip/>}
           />
           <Legend
             width={400}
             align="right"
             wrapperStyle={{ top: 25, right: 25 }}
             iconType="circle"
-          />
-          <Legend
-            width={400}
-            align="left"
-            wrapperStyle={{ top: 25, left: 25 }}
-            iconType="none"
+            formatter={(value) => {
+              return <span style={{ color: '#74798C', fontSize: 14, fontWeight: 500 }}>{value}</span>
+            }}
           />
           <Bar
             name='Poids (kg)'

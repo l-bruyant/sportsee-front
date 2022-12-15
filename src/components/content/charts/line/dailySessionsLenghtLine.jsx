@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Rectangle } from 'recharts'
 import PropTypes from 'prop-types'
 
-import './dailySessionsLenghtLine.css'
+import './dailySessionsLengthLine.css'
 
 const CustomTooltip = ({ active, payload }) => {
   if (active) {

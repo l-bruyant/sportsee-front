@@ -8,21 +8,21 @@ import logoSportSee from '../../../assets/images/logo-sportsee.svg'
 export default function Header () {
   return (
     <header>
-      <div className='headerContent'>
-        <div className='headerLogo'>
+      <div className='header-content'>
+        <div className='header-logo'>
           <img src={logoSportSee}/>
         </div>
         <nav>
-          <div className='headerElement'>
+          <div className='header-element'>
                     Accueil
           </div>
-          <div className='headerElement'>
+          <div className='header-element'>
                     Profil
           </div>
-          <div className='headerElement'>
+          <div className='header-element'>
                     Réglage
           </div>
-          <div className='headerElement'>
+          <div className='header-element'>
                     Communauté
           </div>
         </nav>

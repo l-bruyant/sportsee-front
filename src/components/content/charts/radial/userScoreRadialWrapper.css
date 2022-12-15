@@ -1,0 +1,47 @@
+.square-graph-container {
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    height: 258px;
+    width: 258px;
+    margin: 15px;
+    display: block;
+    position: relative;
+}
+
+.chart-title {
+    z-index: 10;
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    color: #20253A;
+    font-size: 15px;
+    font-weight: 500px;
+}
+
+.score-bubble {
+    width: 60%;
+    height: 60%;
+    background-color: white;
+    border-radius: 999px;
+    position: absolute;
+    top:20%;
+    left:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-score-display {
+    color: #282D30;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 20px 0px 5px 0px
+}
+
+.user-score-legend {
+    color: #74798C;
+    font-size: 16px;
+    line-height: 24px;
+}

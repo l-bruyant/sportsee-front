@@ -1,0 +1,14 @@
+.square-graph-container {
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    height: 258px;
+    width: 258px;
+    margin: 15px;
+    display: block;
+    position: relative;
+}
+
+#radar {
+    background-color: #282D30;
+    color: white;
+}

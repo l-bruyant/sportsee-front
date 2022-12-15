@@ -3,15 +3,10 @@ import React from 'react'
 import {
   currentUser,
   userFirstName,
-  userScore,
   userCalories,
   userProteins,
   userCarbs,
   userLipids,
-  dailyActivityData,
-  dailySessionLengthData,
-  perfByCatData,
-  userScoreData
 } from '../../../utils/dataFormatter'
 
 import './dashboardBody.css'
@@ -23,10 +18,10 @@ import proteinIcon from '../../../assets/images/protein-icon.svg'
 
 import ErrorPage from './errorpage'
 import InfoCard from '../../content/cards/infoCard'
-import DailyActivityBar from '../../content/charts/bar/dailyActivityBar'
-import DailySessionsLenghtLine from '../../content/charts/line/dailySessionsLenghtLine'
-import PerfByCatRadar from '../../content/charts/radar/perfByCatRadar'
-import UserScoreRadial from '../../content/charts/radial/userScoreRadial'
+import DailyActivityBarWrapper from '../../content/charts/bar/dailyActivityBarWrapper' 
+import DailySessionsLengthLineWrapper from '../../content/charts/line/dailySessionsLengthLineWrapper'
+import PerfByCatRadarWrapper from '../../content/charts/radar/perfByCatRadarWrapper'
+import UserScoreRadialWrapper from '../../content/charts/radial/userScoreRadialWrapper'
 
 export default function dashboardBody () {
   if (currentUser == null) {
@@ -36,35 +31,16 @@ export default function dashboardBody () {
   return (
     <div className='dashboard-page-wrapper'>
       <div className='dashboard-page-header'>
-        <h1>Bonjour <span className='red'>{userFirstName}</span></h1>
+        <h1>Bonjour <span className='red-text'>{userFirstName}</span></h1>
         <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
       </div>
       <div className='dashboard-page-content'>
         <div className='dashboard-page-content-main'>
-          <div className='wide-graph-container'>
-            <div className='chart-title'>Activité quotidienne</div>
-            <DailyActivityBar chartData={dailyActivityData}/>
-          </div>
+          <DailyActivityBarWrapper />
           <div className='dashboard-page-content-main-bottom'>
-            <div className='square-graph-container' id='sessions'>
-              <div className='chart-title'>Durée moyenne des sessions</div>
-              <DailySessionsLenghtLine chartData={dailySessionLengthData} />
-            </div>
-            <div className='square-graph-container' id='radar'>
-              <PerfByCatRadar chartData={perfByCatData} />
-            </div>
-            <div className='square-graph-container' id='score'>
-              <div className='chart-title'>Score</div>
-              <div className='score-bubble'>
-                <div className='user-score-display'>
-                  {userScore}%
-                </div>
-                <div className='user-score-legend'>
-                                de votre <br/> objectif
-                </div>
-              </div>
-              <UserScoreRadial chartData={userScoreData} />
-            </div>
+            <DailySessionsLengthLineWrapper />
+            <PerfByCatRadarWrapper />
+            <UserScoreRadialWrapper />
           </div>
         </div>
         <div className='dashboard-page-content-side'>

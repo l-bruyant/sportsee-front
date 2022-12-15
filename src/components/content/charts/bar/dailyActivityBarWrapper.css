@@ -1,0 +1,20 @@
+.wide-graph-container {
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    width: 835px;
+    height: 320px;
+    min-height: 320px;
+    margin: 15px;
+    display: block;
+    position: relative;
+}
+
+.chart-title {
+    z-index: 10;
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    color: #20253A;
+    font-size: 15px;
+    font-weight: 500px;
+}

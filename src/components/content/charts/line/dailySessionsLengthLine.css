@@ -27,3 +27,14 @@
     font-size: 8px;
     text-align: center;
 } 
+
+#sessions .chart-title {
+    color: white;
+    opacity: 0.6;
+    width: 150px;
+}
+
+#sessions {
+    background-color: red;
+    color: white;
+}

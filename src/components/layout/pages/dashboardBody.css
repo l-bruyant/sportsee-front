@@ -10,7 +10,7 @@
     transition: all 0.2s ease;
 }
 
-.red {
+.red-text {
     color: red;
 }
 
@@ -63,88 +63,13 @@
     transition: all 0.6s ease;
 }
 
-.wide-graph-container {
-    background-color: #FBFBFB;
-    border-radius: 5px;
-    width: 835px;
-    height: 320px;
-    min-height: 320px;
-    margin: 15px;
-    display: block;
-    position: relative;
-}
-
-.chart-title {
-    z-index: 10;
-    position: absolute;
-    top: 24px;
-    left: 32px;
-    color: #20253A;
-    font-size: 15px;
-    font-weight: 500px;
-}
-
-#sessions .chart-title {
-    color: white;
-    opacity: 0.6;
-    width: 150px;
-}
-
-.square-graph-container {
-    background-color: #FBFBFB;
-    border-radius: 5px;
-    height: 258px;
-    width: 258px;
-    margin: 15px;
-    display: block;
-    position: relative;
-}
-
-#sessions {
-    background-color: red;
-    color: white;
-}
-
-#radar {
-    background-color: #282D30;
-    color: white;
-}
-
-.score-bubble {
-    width: 60%;
-    height: 60%;
-    background-color: white;
-    border-radius: 999px;
-    position: absolute;
-    top:20%;
-    left:20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.user-score-display {
-    color: #282D30;
-    font-size: 26px;
-    font-weight: bold;
-    line-height: 24px;
-    margin: 20px 0px 5px 0px
-}
-
-.user-score-legend {
-    color: #74798C;
-    font-size: 16px;
-    line-height: 24px;
-}
-
 @media screen and (max-width:1440px) {
     .dashboard-page-content {
         align-items: flex-start;
     }
     .dashboard-page-header {
         margin-bottom: 20px;
-    }*
+    }
     
     .dashboard-page-header h1 {
         margin-bottom: 12px;

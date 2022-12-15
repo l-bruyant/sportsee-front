@@ -1,16 +1,17 @@
 
 import React from 'react'
-import './infoCard.css'
 import PropTypes from 'prop-types'
 
-Infocard.propTypes = {
+import './infoCard.css'
+
+InfoCard.propTypes = {
   imgSrc: PropTypes.string,
   number: PropTypes.number,
   unit: PropTypes.string,
   category: PropTypes.string
 }
 
-export default function Infocard ({ imgSrc, number, unit, category }) {
+export default function InfoCard ({ imgSrc, number, unit, category }) {
   return (
     <div className='infocard'>
         <img src={imgSrc} className='infocard-icon'/>

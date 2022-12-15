@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-// eslint-disable-next-line no-unused-vars
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Text, Tooltip, Legend, ResponsiveContainer, Customized } from 'recharts'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
+
 import './dailyActivityBar.css'
 
 const CustomTooltip = ({ active, payload }) => {
@@ -17,10 +17,10 @@ const CustomTooltip = ({ active, payload }) => {
   return null
 }
 
-export default class DoubleBarChart extends PureComponent {
+export default class DailyActivityBar extends PureComponent {
   static get propTypes () {
     return {
-      tableData: PropTypes.any
+      graphData: PropTypes.any
     }
   }
 
@@ -30,7 +30,7 @@ export default class DoubleBarChart extends PureComponent {
         <BarChart
           width={500}
           height={300}
-          data={this.props.tableData}
+          data={this.props.graphData}
           barGap={8}
           margin={{
             top: 112,

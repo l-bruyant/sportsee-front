@@ -2,6 +2,7 @@
 import React, { PureComponent } from 'react'
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Rectangle } from 'recharts'
 import PropTypes from 'prop-types'
+
 import './dailySessionsLenghtLine.css'
 
 const CustomTooltip = ({ active, payload }) => {
@@ -19,10 +20,10 @@ const CustomCursor = ({ points }) => {
   return <Rectangle fill="#000000" opacity={0.1} x={points[0].x} width={400} height={400} />
 }
 
-export default class SimpleLineChart extends PureComponent {
+export default class DailySessionsLenghtLine extends PureComponent {
   static get propTypes () {
     return {
-      tableData: PropTypes.any
+      graphData: PropTypes.any
     }
   }
 
@@ -32,7 +33,7 @@ export default class SimpleLineChart extends PureComponent {
         <LineChart
           width={500}
           height={300}
-          data={this.props.tableData}
+          data={this.props.graphData}
           margin={{
             top: 100,
             right: 0,

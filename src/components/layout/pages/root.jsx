@@ -1,7 +1,9 @@
+import { Outlet } from 'react-router-dom'
+
+import './root.css'
+
 import React from 'react'
 import Header from '../nav/appHeader'
-import { Outlet } from 'react-router-dom'
-import './root.css'
 
 export default function Root () {
   return (

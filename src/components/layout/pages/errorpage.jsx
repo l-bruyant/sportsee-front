@@ -1,4 +1,5 @@
 import React from 'react'
+
 import './errorpage.css'
 
 export default function ErrorPage () {

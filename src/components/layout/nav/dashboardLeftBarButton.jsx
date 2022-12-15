@@ -1,7 +1,8 @@
 
 import React from 'react'
-import './dashboardLeftBarButton.css'
 import PropTypes from 'prop-types'
+
+import './dashboardLeftBarButton.css'
 
 ActivityFilter.propTypes = {
   src: PropTypes.string

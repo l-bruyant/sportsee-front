@@ -1,14 +1,22 @@
-# Title 1
+# Sportsee | A personnal sports Dashboard (front end part)
+Réalisé par Luc Bruyant sur la base des spécifications fournies par OpenClassrooms (projet 12 parcours front-end)
 
-[Link](https://github.com/facebook/create-react-app).
+## Description du projet
+Prototype d'une web app permettant de suivre son entrainement sportif personnel. 
+Seule une version simple de la page dashboard est réalisée.
 
-## Title 2
+## Ressources utiles
+[Maquettes graphiques Figma](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?t=DHOqyie0gq1Vml4W-0).
+[Back-end du projet (nécessaire pour le faire fonctionner)](https://github.com/l-bruyant/sportsee-back)
+
+
 
 
 ### `Code extract`
 
-[Link](https://github.com/facebook/create-react-app).
 
 Text
 
-[![forthebadge](https://forthebadge.com/images/badges/fuck-it-ship-it.svg)](https://forthebadge.com)
+
+Status : waiting for review
+

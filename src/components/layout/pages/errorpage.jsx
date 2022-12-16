@@ -3,11 +3,12 @@ import React from 'react'
 import './errorpage.css'
 
 export default function ErrorPage () {
-  return (
 
+  return ( 
     <div id="error-page">
-      <h1>404</h1>
-      <p>Page introuvable. Essayez une URL au format /dashboard/userId</p>
+      <h1>Erreur</h1>
+      <p>Une erreur est survenue</p>
+      <p>Merci de contacter les administrateurs de la plateforme</p>
     </div>
   )
 }

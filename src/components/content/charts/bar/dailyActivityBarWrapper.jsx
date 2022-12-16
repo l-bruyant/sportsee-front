@@ -14,9 +14,13 @@ export default function DailyActivityBarWrapper () {
 
   useEffect(() => {
     const call = async () => {
-      const receivedUserActivityData = await getDailyActivity (id)
-      setUserDailyActivity(receivedUserActivityData)
-      setIsLoading(false)
+      try {
+        const receivedUserActivityData = await getDailyActivity (id)
+        setUserDailyActivity(receivedUserActivityData)
+        setIsLoading(false)
+      } catch (error) {
+        console.error(error)
+      }
     }; 
     call()
   }, [] ) 

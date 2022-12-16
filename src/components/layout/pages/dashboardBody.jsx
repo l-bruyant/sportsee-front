@@ -23,10 +23,14 @@ export default function dashboardBody () {
 
   useEffect(() => {
     const call = async () => {
-      const receivedUserData = await getUserData(id)
-      setUserData(receivedUserData)
-      setDataLoading(false)
-    }; 
+      try {
+        const receivedUserData = await getUserData(id)
+        setUserData(receivedUserData)
+        setDataLoading(false)
+      } catch (error) {
+        console.error(error)
+      }
+    };
     call()
   }, [] ) 
 

@@ -14,9 +14,13 @@ export default function PerfByCatRadarWrapper () {
 
   useEffect(() => {
     const call = async () => {
-      const receivedUserActivityByCatData = await getPerfByCategory (id)
-      setUserActivityByCat(receivedUserActivityByCatData)
-      setIsLoading(false)
+      try {
+        const receivedUserActivityByCatData = await getPerfByCategory (id)
+        setUserActivityByCat(receivedUserActivityByCatData)
+        setIsLoading(false)
+      } catch (error) {
+        console.error(error)
+      }
     }; 
     call()
   }, [] )

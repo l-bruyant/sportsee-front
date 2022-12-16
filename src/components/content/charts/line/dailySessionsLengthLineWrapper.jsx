@@ -14,9 +14,13 @@ export default function DailySessionsLengthLineWrapper () {
 
   useEffect(() => {
     const call = async () => {
-      const receivedUserSessionLengthData = await getDailySessionsLength (id)
-      setUserSessionLength(receivedUserSessionLengthData)
-      setIsLoading(false)
+      try {
+        const receivedUserSessionLengthData = await getDailySessionsLength (id)
+        setUserSessionLength(receivedUserSessionLengthData)
+        setIsLoading(false)
+      } catch (error) {
+        console.error(error)
+      }
     }; 
     call()
   }, [] )

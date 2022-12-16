@@ -13,7 +13,6 @@ export const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
-      // { index: true, element: <Dashboard /> },
       {
         path: 'dashboard/:userId',
         element: <Dashboard />,

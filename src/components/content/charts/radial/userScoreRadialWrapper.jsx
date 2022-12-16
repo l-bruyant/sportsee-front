@@ -16,9 +16,13 @@ export default function UserScoreRadialWrapper () {
 
   useEffect(() => {
     const call = async () => {
-      const receivedUserData = await getUserData (id)
-      setUserData(receivedUserData)
-      setIsLoading(false)
+      try {
+        const receivedUserData = await getUserData (id)
+        setUserData(receivedUserData)
+        setIsLoading(false)
+      } catch (error) {
+        console.log(error)
+      }
     }; 
     call()
   }, [] )

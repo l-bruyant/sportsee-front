@@ -6,7 +6,7 @@
             "lastName": "Testor",
             "age": 30
         },
-        "score": 0.27,
+        "todayScore": 0.27,
         "keyData": {
             "calorieCount": 1800,
             "proteinCount": 200,

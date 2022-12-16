@@ -8,6 +8,8 @@ import DailyActivity from './models/dailyActivity.js'
 import DailySessionsLength from './models/dailySessionsLength.js'
 import PerfByCategory from './models/perfByCategory.js'
 
+export const mockedUserEasyExport = mockedUser
+
 export const currentUser = new UserData(mockedUser)
 export const currentDailyActivity = new DailyActivity(mockedUserActivity)
 export const currentDailySessionsLength = new DailySessionsLength(mockedUserAverageSessions)

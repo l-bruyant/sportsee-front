@@ -39,5 +39,5 @@ export default class UserScoreRadial extends PureComponent {
 }
 
 UserScoreRadial.propTypes = {
-  chartData: PropTypes.array
+  chartData: PropTypes.object
 }

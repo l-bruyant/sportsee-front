@@ -5,7 +5,11 @@ export default class UserData {
     this._proteinCount = userData.data.keyData.proteinCount
     this._carbohydrateCount = userData.data.keyData.carbohydrateCount
     this._lipidCount = userData.data.keyData.lipidCount
-    this._score = userData.data.score
+    if (userData.data.todayScore == null) {
+      this._score = userData.data.score
+    } else {
+      this._score = userData.data.todayScore
+    }
   }
 
   get firstName () {
@@ -26,6 +30,10 @@ export default class UserData {
 
   get lipids () {
     return this._lipidCount
+  }
+
+  get scoreDisplay () {
+    return this._score * 100
   }
 
   get radialBarChartData () {

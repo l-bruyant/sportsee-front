@@ -5,6 +5,14 @@ import './appHeader.css'
 
 import logoSportSee from '../../../assets/images/logo-sportsee.svg'
 
+/**
+*
+* @component
+*
+* @returns the app main navbar which stays at the top of the page
+*
+*/
+
 export default function Header () {
   return (
     <header>

@@ -8,13 +8,28 @@ import carbsIcon from '../../../assets/images/carbs-icon.svg'
 import lipidsIcon from '../../../assets/images/lipids-icon.svg'
 import proteinIcon from '../../../assets/images/protein-icon.svg'
 
-// import ErrorPage from './errorpage'
 import InfoCard from '../../content/cards/infoCard'
 import DailyActivityBarWrapper from '../../content/charts/bar/dailyActivityBarWrapper' 
 import DailySessionsLengthLineWrapper from '../../content/charts/line/dailySessionsLengthLineWrapper'
 import PerfByCatRadarWrapper from '../../content/charts/radar/perfByCatRadarWrapper'
 import UserScoreRadialWrapper from '../../content/charts/radial/userScoreRadialWrapper'
 import { getUserData } from '../../../utils/api/api'
+
+/**
+*
+* @component
+*
+* Makes a fetch call in useEffect to get user Data, based on userId collected in URL with useParams 
+* -> Then stores the userData in state when available
+*
+* isDataLoading state prevents errors by avoiding trying to display information before the fetch is complete
+*
+* @returns the main content of the dashboard page
+* This includes : 
+* - A header with the user name 
+* - Areas dedicated to each data display component
+*
+*/
 
 export default function dashboardBody () {
   const id = useParams().userId
@@ -33,7 +48,6 @@ export default function dashboardBody () {
     };
     call()
   }, [] ) 
-
 
   return (
     <div className='dashboard-page-wrapper'>

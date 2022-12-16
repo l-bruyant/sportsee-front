@@ -2,6 +2,14 @@ import React from 'react'
 
 import './errorpage.css'
 
+/**
+*
+* @component
+*
+* @returns an error message 
+*
+*/
+
 export default function ErrorPage () {
 
   return ( 

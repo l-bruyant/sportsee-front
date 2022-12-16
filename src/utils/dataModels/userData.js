@@ -1,3 +1,14 @@
+/**
+* Used to format the API user data and make it suitable for the app 
+*
+* @class
+*
+* @param performancesData a Json File with user data, as received from the back-end
+*
+* @returns an object with formatted user data, useable by the app 
+* 
+*/
+
 export default class UserData {
   constructor (userData) {
     this._firstName = userData.data.userInfos.firstName

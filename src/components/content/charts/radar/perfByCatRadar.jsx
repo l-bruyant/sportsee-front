@@ -3,6 +3,17 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Pola
 import PropTypes from 'prop-types'
 
 import './perfByCatRadar.css'
+
+/**
+*
+* @component
+*
+* @param chartData an object with pre-formatted data to generate the performance by category chart
+*
+* @returns a radar chart presenting the user performance by category
+*
+*/
+
 export default class PerfByCatRadar extends PureComponent {
   render () {
     return (

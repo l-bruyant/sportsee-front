@@ -4,6 +4,17 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 
 import './dailyActivityBar.css'
 
+/**
+*
+* @component
+*
+* @param active defines if the element is currently being hovered, to know when display it
+* @param payload an object that lets us access currently hovered data  
+*
+* @returns a custom tool tip that will be displayed on top of the daily activity chart when hovering
+*
+*/
+
 const CustomTooltip = ({ active, payload }) => {
   if (active) {
     return (
@@ -15,6 +26,16 @@ const CustomTooltip = ({ active, payload }) => {
   }
   return null
 }
+
+/**
+*
+* @component
+*
+* @param chartData an object with pre-formatted data to generate the daily activity chart
+*
+* @returns a double bar chart presenting the user daily activity and weight
+*
+*/
 
 export default class DailyActivityBar extends PureComponent {
   render () {
@@ -49,29 +70,31 @@ export default class DailyActivityBar extends PureComponent {
             yAxisId="right"
             stroke="#9B9EAC"
             dataKey="kil"
-            tickCount={3}
             type="number"
-            domain={['dataMin -1', 'dataMax + 1']}
-            minTickGap={1}
+            domain={['dataMin - 4', 'dataMax + 4']}
             allowDecimals={false}
             allowDataOverflow={true}
             axisLine={false}
             tickLine={false}
-            tickMargin="45"
+            tickMargin="40"
+            scale='linear'
+            minTickGap={20}
+            tickCount={3}
           />
           <YAxis
             orientation="left"
             yAxisId="left"
             stroke="#000000"
             dataKey="cal"
-            tickCount={0}
+            tickCount={12}
             type="number"
             domain={['dataMin -100', 'dataMax + 100']}
             minTickGap="1"
             allowDecimals={true}
             allowDataOverflow={false}
-            axisLine={true}
-            tickLine={true}
+            axisLine={false}
+            tickLine={false}
+            tick={false}
             tickMargin="0"
           />
           <Tooltip

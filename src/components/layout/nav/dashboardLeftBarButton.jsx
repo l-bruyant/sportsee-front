@@ -4,9 +4,15 @@ import PropTypes from 'prop-types'
 
 import './dashboardLeftBarButton.css'
 
-ActivityFilter.propTypes = {
-  src: PropTypes.string
-}
+/**
+*
+* @component
+*
+* @param src is a string containing an icon URL to display in the button
+*
+* @returns a button with an icon inside
+*
+*/
 
 export default function ActivityFilter ({ src }) {
   return (
@@ -14,4 +20,8 @@ export default function ActivityFilter ({ src }) {
       <img src={src} alt="" className='activity-filter-icon'/>
     </div>
   )
+}
+
+ActivityFilter.propTypes = {
+  src: PropTypes.string
 }

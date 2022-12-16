@@ -4,6 +4,16 @@ import PropTypes from 'prop-types'
 
 import './userScoreRadial.css'
 
+/**
+*
+* @component
+*
+* @param chartData an object with pre-formatted data to generate the score chart
+*
+* @returns a radial bar chart presenting the user score
+*
+*/
+
 export default class UserScoreRadial extends PureComponent {
   render () {
     return (

@@ -5,9 +5,20 @@ import { getUserData } from '../../../../utils/api/api'
 
 import './userScoreRadialWrapper.css'
 
-
-
 import UserScoreRadial from './userScoreRadial.jsx'
+
+/**
+*
+* @component
+*
+* Makes a fetch call in useEffect to get user score data, based on userId collected in URL with useParams 
+* -> Then stores the userData in state when available
+*
+* isDataLoading state prevents errors by avoiding trying to display information before the fetch is complete
+*
+* @returns a box containing the chart title and the user score radial bar chart 
+*
+*/
 
 export default function UserScoreRadialWrapper () {
   const id = useParams().userId

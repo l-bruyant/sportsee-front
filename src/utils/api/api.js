@@ -10,6 +10,16 @@ import mockedUserPerformance from '../dataMocks/mock_userperformance.json'
 
 let useMockData = false
 
+/**
+* Allows to request user data to display in the afpp 
+* Depending on the value of useMockData, makes a fetch request or returns mocked data
+*
+* @param id The current user Id
+
+* @returns an object with useable, formatted formatted user Data
+* 
+*/
+
 export async function getUserData (id) {
   try {
     const res = await fetch(`http://localhost:3001/user/${id}`)
@@ -20,6 +30,16 @@ export async function getUserData (id) {
     console.log(error)
   }
 }
+
+/**
+* Allows to request user daily activity data to display in the app 
+* Depending on the value of useMockData, makes a fetch request or returns mocked data
+*
+* @param id The current user Id
+
+* @return an object with useable, formatted user daily activity Data
+* 
+*/
 
 export async function getDailyActivity (id) {
   try {
@@ -32,6 +52,16 @@ export async function getDailyActivity (id) {
   }
 }
 
+/**
+* Allows to request user daily session length data to display in the app 
+* Depending on the value of useMockData, makes a fetch request or returns mocked data
+*
+* @param id The current user Id
+
+* @return an object with useable, formatted user daily session length data
+* 
+*/
+
 export async function getDailySessionsLength (id) {
   try {
     const res = await fetch(`http://localhost:3001/user/${id}/average-sessions`)
@@ -42,6 +72,16 @@ export async function getDailySessionsLength (id) {
     console.log(error)
   }
 }
+
+/**
+* Allows to request user performance by category data to display in the app 
+* Depending on the value of useMockData, makes a fetch request or returns mocked data
+*
+* @param id The current user Id
+
+* @return an object with useable, formatted user performance by category data
+* 
+*/
 
 export async function getPerfByCategory (id) {
   try {

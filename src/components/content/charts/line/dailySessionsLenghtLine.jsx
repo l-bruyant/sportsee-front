@@ -4,6 +4,17 @@ import PropTypes from 'prop-types'
 
 import './dailySessionsLengthLine.css'
 
+/**
+*
+* @component
+*
+* @param active defines if the element is currently being hovered, to know when display it
+* @param payload an object that lets us access currently hovered data  
+*
+* @returns a custom tool tip that will be displayed on top of the daily sessions length chart when hovering
+*
+*/
+
 const CustomTooltip = ({ active, payload }) => {
   if (active) {
     return (
@@ -15,9 +26,29 @@ const CustomTooltip = ({ active, payload }) => {
   return null
 }
 
+/**
+*
+* @component
+*
+* @param points defines the coordinates of the currently hovered data point on the chart
+*
+* @returns a dark background rectangle that gets displayed inside the daily sessions length chart, on the right of the currently hovered data point
+*
+*/
+
 const CustomCursor = ({ points }) => {
   return <Rectangle fill="#000000" opacity={0.1} x={points[0].x} width={400} height={400} />
 }
+
+/**
+*
+* @component
+*
+* @param chartData an object with pre-formatted data to generate the daily sessions length chart
+*
+* @returns a line chart presenting the user daily sessions length and weight
+*
+*/
 
 export default class DailySessionsLenghtLine extends PureComponent {
   render () {

@@ -5,6 +5,15 @@ import './root.css'
 import React from 'react'
 import Header from '../nav/appHeader'
 
+/**
+*
+* @component 
+*
+* @returns the high level visual canvas of the app (header on top, router sub routes in outlet)
+* Only the content of Outlet will change based on current URL
+*
+*/
+
 export default function Root () {
   return (
     <div id='app-wrapper'>

@@ -7,6 +7,14 @@ import Root from '../layout/pages/root'
 import Dashboard from '../layout/pages/dashboardLayout'
 import ErrorPage from '../layout/pages/errorpage'
 
+/**
+*
+* Define what to display on the page depending on the current url 
+*
+* @component
+*
+*/
+
 export const router = createBrowserRouter([
   {
     path: '/',

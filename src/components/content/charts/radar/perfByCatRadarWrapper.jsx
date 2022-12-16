@@ -7,6 +7,19 @@ import './perfByCatRadarWrapper.css'
 
 import PerfByCatRadar from './perfByCatRadar.jsx'
 
+/**
+*
+* @component
+*
+* Makes a fetch call in useEffect to get performance by category data, based on userId collected in URL with useParams 
+* -> Then stores the userActivityByCat in state when available
+*
+* isDataLoading state prevents errors by avoiding trying to display information before the fetch is complete
+*
+* @returns a box containing the chart title and the performance by category radar chart 
+*
+*/
+
 export default function PerfByCatRadarWrapper () {
   const id = useParams().userId
   const [userActivityByCat, setUserActivityByCat]= useState({})

@@ -9,6 +9,14 @@ import weightIcon from '../../../assets/images/weight-icon.svg'
 
 import ActivityFilter from './dashboardLeftBarButton'
 
+/**
+*
+* @component
+*
+* @returns the dashboard left bar with navigation icons (activity filters)
+*
+*/
+
 export default function DashboardLeftBar () {
   return (
     <div className='dashboard-left-bar'>

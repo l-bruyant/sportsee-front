@@ -29,12 +29,13 @@ Main feature : display user data in graphs.
 ### Insall all dependencies (see package.json for list of dependencies)
     npm install 
 
-### Launch the app
+### Launch the front-end app
     npm start dev
 
 ### How to test ? 
 
 #### With mocked data
+First, make sure to laucnh the front-end app (see step above)  
 If you don't want to run the back-end, you can use mocked data.  
 To activate mocked data, go to src/utils/api/api.js and set useMockData to true.  
 Then, go to 'http://localhost:3000/dashboard/100' to display the mocked data. 

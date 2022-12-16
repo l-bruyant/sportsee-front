@@ -4,7 +4,7 @@ import './errorpage.css'
 
 /**
 *
-* @component
+* @function ErrorPage
 *
 * @returns an error message 
 *

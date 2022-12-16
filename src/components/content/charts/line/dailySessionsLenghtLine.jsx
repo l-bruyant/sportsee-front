@@ -6,7 +6,7 @@ import './dailySessionsLengthLine.css'
 
 /**
 *
-* @component
+* @function CustomTooltip
 *
 * @param active defines if the element is currently being hovered, to know when display it
 * @param payload an object that lets us access currently hovered data  
@@ -28,7 +28,7 @@ const CustomTooltip = ({ active, payload }) => {
 
 /**
 *
-* @component
+* @function CustomCursor
 *
 * @param points defines the coordinates of the currently hovered data point on the chart
 *
@@ -42,7 +42,7 @@ const CustomCursor = ({ points }) => {
 
 /**
 *
-* @component
+* @function DailySessionsLenghtLine
 *
 * @param chartData an object with pre-formatted data to generate the daily sessions length chart
 *

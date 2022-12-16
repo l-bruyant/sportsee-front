@@ -6,7 +6,7 @@ import './infoCard.css'
 
 /**
 *
-* @component
+* @function InfoCard
 *
 * @param imgSrc is a string containing the url to the icon to display
 * @param number is a number that will be displayed in the card

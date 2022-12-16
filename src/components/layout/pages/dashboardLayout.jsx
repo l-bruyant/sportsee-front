@@ -8,7 +8,7 @@ import DashboardBody from './dashboardBody'
 
 /**
 *
-* @component
+* @function Dashboard
 *
 * @returns the structure of the page when the dashboard route is active
 * Left bar on the left, rest of space filled by the dashboard body

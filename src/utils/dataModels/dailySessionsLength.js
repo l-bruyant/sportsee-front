@@ -1,12 +1,12 @@
 /**
 * Used to format the API user average sessions per day data and make it suitable for the app 
 *
-* @class
+* @class DailySessionsLength
 *
 * @param averageSessionsData a Json File with user average sessions per day data, as received from the back-end
 *
 * @returns an object with formatted average sessions per day data, useable by the app 
-* 
+*
 */
 
 export default class DailySessionsLength {

@@ -11,7 +11,7 @@ import ActivityFilter from './dashboardLeftBarButton'
 
 /**
 *
-* @component
+* @function DashboardLeftBar
 *
 * @returns the dashboard left bar with navigation icons (activity filters)
 *

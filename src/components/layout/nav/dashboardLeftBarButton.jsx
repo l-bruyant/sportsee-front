@@ -6,7 +6,7 @@ import './dashboardLeftBarButton.css'
 
 /**
 *
-* @component
+* @function ActivityFilter
 *
 * @param src is a string containing an icon URL to display in the button
 *

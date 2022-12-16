@@ -9,12 +9,12 @@ import DailySessionsLenghtLine from './dailySessionsLenghtLine'
 
 /**
 *
-* @component
-*
 * Makes a fetch call in useEffect to get daily sessions length data, based on userId collected in URL with useParams 
 * -> Then stores the userSessionLength in state when available
 *
 * isDataLoading state prevents errors by avoiding trying to display information before the fetch is complete
+*
+* @function DailySessionsLengthLineWrapper
 *
 * @returns a box containing the chart title and the daily sessions length line chart 
 *

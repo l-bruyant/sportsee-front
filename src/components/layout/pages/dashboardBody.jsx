@@ -17,12 +17,12 @@ import { getUserData } from '../../../utils/api/api'
 
 /**
 *
-* @component
-*
 * Makes a fetch call in useEffect to get user Data, based on userId collected in URL with useParams 
 * -> Then stores the userData in state when available
 *
 * isDataLoading state prevents errors by avoiding trying to display information before the fetch is complete
+*
+* @function dashboardBody
 *
 * @returns the main content of the dashboard page
 * This includes : 

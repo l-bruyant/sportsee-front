@@ -6,7 +6,7 @@ import './userScoreRadial.css'
 
 /**
 *
-* @component
+* @function UserScoreRadial
 *
 * @param chartData an object with pre-formatted data to generate the score chart
 *

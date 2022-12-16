@@ -9,12 +9,12 @@ import { getDailyActivity } from '../../../../utils/api/api'
 
 /**
 *
-* @component
-*
 * Makes a fetch call in useEffect to get user daily activity data, based on userId collected in URL with useParams 
-* -> Then stores the userDailyActivity in state when available
+* Then stores the userDailyActivity in state when available
 *
 * isDataLoading state prevents errors by avoiding trying to display information before the fetch is complete
+*
+* @function DailyActivityBarWrapper
 *
 * @returns a box containing the chart title and the user daily activity bar chart 
 *

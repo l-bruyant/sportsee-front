@@ -1,7 +1,7 @@
 /**
 * Used to format the API user data and make it suitable for the app 
 *
-* @class
+* @class UserData
 *
 * @param performancesData a Json File with user data, as received from the back-end
 *

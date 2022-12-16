@@ -6,7 +6,7 @@ import './dailyActivityBar.css'
 
 /**
 *
-* @component
+* @function CustomTooltip
 *
 * @param active defines if the element is currently being hovered, to know when display it
 * @param payload an object that lets us access currently hovered data  
@@ -29,7 +29,7 @@ const CustomTooltip = ({ active, payload }) => {
 
 /**
 *
-* @component
+* @function
 *
 * @param chartData an object with pre-formatted data to generate the daily activity chart
 *

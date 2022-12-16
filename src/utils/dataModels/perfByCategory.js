@@ -1,7 +1,7 @@
 /**
 * Used to format the API user performance by category data and make it suitable for the app 
 *
-* @class
+* @class PerfByCategory
 *
 * @param performancesData a Json File with user performance by category data, as received from the back-end
 *

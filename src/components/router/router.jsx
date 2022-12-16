@@ -11,7 +11,7 @@ import ErrorPage from '../layout/pages/errorpage'
 *
 * Define what to display on the page depending on the current url 
 *
-* @component
+* @component router 
 *
 */
 

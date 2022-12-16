@@ -6,7 +6,7 @@ import './perfByCatRadar.css'
 
 /**
 *
-* @component
+* @function PerfByCatRadar
 *
 * @param chartData an object with pre-formatted data to generate the performance by category chart
 *

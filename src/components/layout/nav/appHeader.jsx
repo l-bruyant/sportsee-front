@@ -7,7 +7,7 @@ import logoSportSee from '../../../assets/images/logo-sportsee.svg'
 
 /**
 *
-* @component
+* @function Header
 *
 * @returns the app main navbar which stays at the top of the page
 *

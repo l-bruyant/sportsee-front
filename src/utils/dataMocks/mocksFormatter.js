@@ -1,12 +1,12 @@
-import mockedUser from '../data/mocks/mock_user.json'
-import mockedUserActivity from '../data/mocks/mock_useractivity.json'
-import mockedUserAverageSessions from '../data/mocks/mock_useraveragesessions.json'
-import mockedUserPerformance from '../data/mocks/mock_userperformance.json'
+import mockedUser from './mock_user.json'
+import mockedUserActivity from './mock_useractivity.json'
+import mockedUserAverageSessions from './mock_useraveragesessions.json'
+import mockedUserPerformance from './mock_userperformance.json'
 
-import UserData from './models/userData'
-import DailyActivity from './models/dailyActivity.js'
-import DailySessionsLength from './models/dailySessionsLength.js'
-import PerfByCategory from './models/perfByCategory.js'
+import UserData from '../dataModels/userData'
+import DailyActivity from '../dataModels/dailyActivity.js'
+import DailySessionsLength from '../dataModels/dailySessionsLength.js'
+import PerfByCategory from '../dataModels/perfByCategory.js'
 
 export const mockedUserEasyExport = mockedUser
 

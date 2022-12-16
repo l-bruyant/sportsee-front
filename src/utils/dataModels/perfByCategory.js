@@ -15,7 +15,7 @@ export default class PerfByCategory {
       const activitiyNameCap = activityName.charAt(0).toUpperCase() + activityName.slice(1)
       return {
         activity: activitiyNameCap,
-        score: activitiy.value
+        score:activitiy.value
       }
     })
   }

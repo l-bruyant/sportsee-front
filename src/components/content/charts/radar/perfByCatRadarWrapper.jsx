@@ -10,19 +10,27 @@ import PerfByCatRadar from './perfByCatRadar.jsx'
 export default function PerfByCatRadarWrapper () {
   const id = useParams().userId
   const [userActivityByCat, setUserActivityByCat]= useState({})
+  const [isLoading, setIsLoading]= useState(true)
 
   useEffect(() => {
     const call = async () => {
       const receivedUserActivityByCatData = await getPerfByCategory (id)
       setUserActivityByCat(receivedUserActivityByCatData)
+      setIsLoading(false)
     }; 
     call()
   }, [] )
 
   return (
     <div className='square-graph-container' id='radar'>
-      <PerfByCatRadar chartData={userActivityByCat.radarChartData} />
+      {isLoading 
+        ? 
+        'Loading...' 
+        :
+        <PerfByCatRadar chartData={userActivityByCat.radarChartData} />
+      }
     </div>
   )
+
 }
 

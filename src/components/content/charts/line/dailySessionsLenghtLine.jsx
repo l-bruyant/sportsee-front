@@ -79,7 +79,7 @@ CustomTooltip.propTypes = {
 }
 
 CustomCursor.propTypes = {
-  points: PropTypes.object
+  points: PropTypes.array
 }
 
 DailySessionsLenghtLine.propTypes = {

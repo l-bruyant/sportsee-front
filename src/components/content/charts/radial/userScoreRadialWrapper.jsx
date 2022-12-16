@@ -5,16 +5,20 @@ import { getUserData } from '../../../../utils/api/api'
 
 import './userScoreRadialWrapper.css'
 
+
+
 import UserScoreRadial from './userScoreRadial.jsx'
 
 export default function UserScoreRadialWrapper () {
   const id = useParams().userId
   const [userData, setUserData]= useState({})
+  const [isLoading, setIsLoading]= useState(true)
 
   useEffect(() => {
     const call = async () => {
       const receivedUserData = await getUserData (id)
       setUserData(receivedUserData)
+      setIsLoading(false)
     }; 
     call()
   }, [] )
@@ -22,14 +26,19 @@ export default function UserScoreRadialWrapper () {
   return (
     <div className='square-graph-container' id='score'>
       <div className='chart-title'>Score</div>
-      <div className='score-bubble'>
-        <div className='user-score-display'>
-          {userData.scoreDisplay}%
-        </div>
-        <div className='user-score-legend'>
+      {isLoading 
+        ? 
+        'Loading...' 
+        :
+        <div className='score-bubble'>
+          <div className='user-score-display'>
+            {userData.scoreDisplay}%
+          </div>
+          <div className='user-score-legend'>
                       de votre <br/> objectif
-        </div>
-      </div>
+          </div>
+        </div>      
+      }
       <UserScoreRadial chartData={userData.radialBarChartData} />
     </div>
   )

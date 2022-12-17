@@ -26,7 +26,7 @@ Main feature : display user data in graphs.
 ### 5.2 Installing the project 
 - Fork the repository
 - Clone it on your computer
-### 5.3 Insall all dependencies (see package.json for list of dependencies)  
+### 5.3 Install all dependencies (see package.json for list of dependencies)  
     npm install 
 
 ### 5.4 Launch the front-end app

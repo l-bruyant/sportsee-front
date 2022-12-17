@@ -30,9 +30,9 @@ Main feature : display user data in graphs.
     npm install 
 
 ### Launch the front-end app
-- Make sure to be in the project folder  
+Make sure to be in the project folder  
 
-        npm start dev
+    npm start dev
 
 ### How to test ? 
 First, make sure to laucnh the front-end app (see step above)  

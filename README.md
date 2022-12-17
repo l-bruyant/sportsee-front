@@ -23,15 +23,16 @@ Main feature : display user data in graphs.
 - Node.js
 - Git 
 
-### Getting the project on your machine
+### Getting the project on your machine  
     git clone https://github.com/l-bruyant/sportsee-front.git
 
-### Insall all dependencies (see package.json for list of dependencies)
+### Insall all dependencies (see package.json for list of dependencies)  
     npm install 
 
 ### Launch the front-end app
 - Make sure to be in the project folder  
-    npm start dev
+
+        npm start dev
 
 ### How to test ? 
 First, make sure to laucnh the front-end app (see step above)  

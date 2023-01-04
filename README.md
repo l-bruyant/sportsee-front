@@ -1,7 +1,7 @@
 # Sportsee (front end part)
 
 ## 1. Project status
-Waiting for review
+Validated
 
 ## 2. Project pitch
 Prototype of a web app that lets you track your fitness data.  
